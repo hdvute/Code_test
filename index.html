@@ -4,8 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            /* background-color: yellow; */
+            height: 100vh;
+        }        
+        
+        .item{
+            height: 220px;
+            width: 300px;
+            /* background-color: blueviolet; */
+        }
+        .item img{
+            /* width: 300px; */
+            /* height: 200px; */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width:768px) {
+            .container{
+                background-color: tomato;
+            }
+        }
+        @media (max-width:500px){
+            /* 
+                Những màn hình có width nhỏ hơn hoặc bằng max sẽ  ăn css bổ xung trong @media
+            */
+            .container {
+                background-color: aqua;
+                flex-direction: column;
+            }
+            .item {
+                width: 100%;
+                height: 400px;
+            }
+            
+            .item div img{
+                width: 100%;
+                height: 180px;
+            }
+        }
+        .item h2{
+            height: 60px;
+        }
+    </style>
 </head>
 <body>
-    Hi !!!!!!
+    <div class="container">
+        <div class="item item1">
+            <div>
+                <img src="./image/food1.jpg" alt=""> 
+            </div>       
+            <h2>The Perfect Sandwich, A Real NYC Classic</h2>
+            <p>some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>                  
+        </div>
+        <div class="item item2">
+            <div>
+                <img src="./image/food2.jpg" alt="">
+            </div>
+            <h2>Let Me Tell You About This Steak</h2>
+            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="item item3">
+            <div>
+                <img src="./image/food3.jpg" alt="">
+            </div>
+            <h2>Cherries, interrupted</h2>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.
+                What else?</p>
+        </div>
+    </div>
 </body>
 </html>
